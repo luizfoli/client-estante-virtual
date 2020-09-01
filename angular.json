@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "client-estante-virtual"
+    }
+  },
+  "defaultProject": "client-estante-virtual",
+  "cli": {
+    "analytics": false
+  }
 }
