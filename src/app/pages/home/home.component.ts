@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LivroService } from '../../services/livro.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private livroService: LivroService) { }
 
   ngOnInit(): void {
+  }
+
+  public onSearchBooks(titulo: string) {
+    this.livroService.buscaLivros(titulo)
+        .subscribe(data => console.log(data));
   }
 
 }
